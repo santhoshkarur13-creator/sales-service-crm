@@ -15,7 +15,7 @@ const Footer = () => {
                 gap: "3rem",
                 padding: 0
             }}>
-               
+
                 <div>
                     <div style={{ display: "flex", alignItems: "center", marginBottom: "1.5rem" }}>
                         <img src={logo} alt="Cooling Masters" style={{ height: "40px", marginRight: "12px" }} />
@@ -26,7 +26,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-               
+
                 <div>
                     <h4 style={{ marginBottom: "1.5rem", fontSize: "1.1rem", fontWeight: "600" }}>Platform</h4>
                     <ul style={{ listStyle: "none", padding: 0 }}>
@@ -63,7 +63,7 @@ const Footer = () => {
                 opacity: 0.5
             }}>
                 © 2026 Cooling Masters. All rights reserved.
-                Create by Gokilasundarraj
+                Create by
             </div>
         </footer>
     );

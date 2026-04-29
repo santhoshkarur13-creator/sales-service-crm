@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
-    
+
     return (
         <footer style={{
             backgroundColor: "#6f7685",
@@ -16,7 +16,7 @@ const Footer = () => {
                 gap: "3rem",
                 padding: 0
             }}>
-               
+
                 <div>
                     <div style={{ display: "flex", alignItems: "center", marginBottom: "1.5rem" }}>
                         <img src={logo} alt="Cooling Masters" style={{ height: "40px", marginRight: "12px" }} />
@@ -27,7 +27,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-               
+
                 <div>
                     <h4 style={{ marginBottom: "1.5rem", fontSize: "1.1rem", fontWeight: "600" }}>Platform</h4>
                     <ul style={{ listStyle: "none", padding: 0 }}>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                   <h4 style={{ marginBottom: "1.5rem", fontSize: "1.1rem", fontWeight: "600" }}>Contact</h4>
+                    <h4 style={{ marginBottom: "1.5rem", fontSize: "1.1rem", fontWeight: "600" }}>Contact</h4>
                     <p style={{ opacity: 0.7, fontSize: "0.9rem", marginBottom: "0.5rem" }}>123 coolingmasters, CBE</p>
                     <p style={{ opacity: 0.7, fontSize: "0.9rem", marginBottom: "0.5rem" }}>+1 (800) COOL-MASTERS</p>
                     <p style={{ opacity: 0.7, fontSize: "0.9rem" }}>support@coolingmasters.com</p>
@@ -62,7 +62,7 @@ const Footer = () => {
                 opacity: 0.5
             }}>
                 © 2026 Cooling Masters. All rights reserved.
-                Create by Gokilasundarraj
+                Create by Santhosh
             </div>
         </footer>
     );

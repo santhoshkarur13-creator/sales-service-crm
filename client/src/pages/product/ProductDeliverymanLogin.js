@@ -13,7 +13,7 @@ const ProductDeliverymanLogin = () => {
     setError("");
 
     const deliveryEmail = "productDeliveryman@gmail.com";
-    const deliveryPassword = "gokilasundarraj";
+    const deliveryPassword = "Santhosh";
 
     if (email === deliveryEmail && password === deliveryPassword) {
       localStorage.setItem("productDeliveryLogin", "true");
@@ -48,7 +48,7 @@ const ProductDeliverymanLogin = () => {
             <label className="input-label">Secure PIN / Password</label>
             <input
               type="password"
-              placeholder="gokilasundarraj"
+              placeholder="Santhosh"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input-field"

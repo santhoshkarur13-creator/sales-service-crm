@@ -14,13 +14,13 @@ const ServiceTechnicianLogin = () => {
 
     if (
       email === "servicetechnician@gmail.com" &&
-      password === "gokilasundarraj"
+      password === "Santhosh"
     ) {
-      
+
       localStorage.setItem("serviceTechnician", "true");
       navigate("/service-technician/home");
     } else {
-      
+
       setError("Invalid email or password");
     }
   };
@@ -49,7 +49,7 @@ const ServiceTechnicianLogin = () => {
             <label className="input-label">Access Password</label>
             <input
               type="password"
-              placeholder="gokilasundarraj"
+              placeholder="Santhosh"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input-field"
