@@ -4,7 +4,7 @@ import AdminNav from "../../components/navbar/AdminNav";
 import AdminFooter from "../../components/footer/AdminFooter"
 
 const ProductManagement = () => {
- 
+
   const [products, setProducts] = useState([]);
 
   const [form, setForm] = useState({
@@ -18,8 +18,8 @@ const ProductManagement = () => {
   const [imagePreview, setImagePreview] = useState("");
   const [editingId, setEditingId] = useState(null);
 
-  const API = "http://localhost:5000/api/products";
-  const IMAGE_BASE_URL = "http://localhost:5000/uploads";
+  const API = "https://sales-service-crmbe.onrender.com/api/products";
+  const IMAGE_BASE_URL = "https://sales-service-crmbe.onrender.com/uploads";
 
   const fetchProducts = async () => {
     try {

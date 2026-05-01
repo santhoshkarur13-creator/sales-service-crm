@@ -9,22 +9,22 @@ const ServiceDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [service, setService] = useState(null);
-  const [problem,setProblem] = useState("")
-  const [price,setPrice] = useState(0)
+  const [problem, setProblem] = useState("")
+  const [price, setPrice] = useState(0)
 
-  const handlechange = (e)=>{
+  const handlechange = (e) => {
     const value = e.target.value
     setProblem(value)
 
-    if(value.toLowerCase().includes("gas")){
+    if (value.toLowerCase().includes("gas")) {
       setPrice(1500)
     }
     else if (value.toLowerCase().includes("water")) {
       setPrice(800);
-    } 
+    }
     else if (value.toLowerCase().includes("not cooling") || value.toLowerCase().includes("no cooling")) {
       setPrice(1200);
-    } 
+    }
     else {
       setPrice(0);
     }
@@ -43,28 +43,28 @@ const ServiceDetails = () => {
   }, [id]);
 
   const addToCart = () => {
-    if(problem.trim() !==""){
-       try {
-       const cartItem = {
-           _id: service._id,
+    if (problem.trim() !== "") {
+      try {
+        const cartItem = {
+          _id: service._id,
           name: service.name,
-          image: service.image,     
-          userProblem: problem,    
-          userPrice: price 
-       }
+          image: service.image,
+          userProblem: problem,
+          userPrice: price
+        }
 
-      let cart = JSON.parse(localStorage.getItem("serviceCart")) || [];
-    cart.push(cartItem);
-    localStorage.setItem("serviceCart", JSON.stringify(cart));
-    navigate("/service-cart");
+        let cart = JSON.parse(localStorage.getItem("serviceCart")) || [];
+        cart.push(cartItem);
+        localStorage.setItem("serviceCart", JSON.stringify(cart));
+        navigate("/service-cart");
 
-    } catch (error) {
-      
-      console.error(error);
+      } catch (error) {
+
+        console.error(error);
+      }
+
     }
-
-    }
-    else{
+    else {
       alert("Please enter your AC problem")
     }
   };
@@ -77,13 +77,13 @@ const ServiceDetails = () => {
   );
 
   const imageUrl = service.image
-    ? `http://localhost:5000/uploads/${service.image}`
+    ? `https://sales-service-crmbe.onrender.com/uploads/${service.image}`
     : "https://via.placeholder.com/600x400?text=Pro+Maintenance";
 
   return (
     <div className="page-wrapper">
       <UserNav />
-      <div className="container" style={{ maxWidth: "1100px", marginTop: "3rem"}}>
+      <div className="container" style={{ maxWidth: "1100px", marginTop: "3rem" }}>
 
         <div className="card fade-in" style={{
           display: "grid",
@@ -95,9 +95,9 @@ const ServiceDetails = () => {
           borderRadius: "24px",
           border: "none",
           borderTop: "6px solid var(--secondary)",
-          width:"100%"
+          width: "100%"
         }}>
-          
+
           <div style={{ position: "relative" }}>
             <div className="card-img" style={{
               height: "100%",
@@ -146,7 +146,7 @@ const ServiceDetails = () => {
 
             <div style={{ marginBottom: "3rem" }}>
               <span style={{ fontSize: "1rem", color: "var(--text-light)", fontWeight: "600", display: "block", marginBottom: "0.5rem" }}>Professional Service Fee</span>
-              <input type="text" placeholder="Enter your AC Problem" className="ac-problem-input" value={problem} onChange={handlechange}/>
+              <input type="text" placeholder="Enter your AC Problem" className="ac-problem-input" value={problem} onChange={handlechange} />
               <h3 className="card-price" style={{ fontSize: "3.5rem", color: "var(--primary)" }}>₹{price === 0 ? "Pay After Service" : price}</h3>
               <p style={{ fontSize: "0.875rem", color: "var(--accent)", fontWeight: "700" }}>✓ Includes transport & basic diagnostics</p>
             </div>
@@ -162,7 +162,7 @@ const ServiceDetails = () => {
               <button
                 className="btn btn-outline"
                 style={{ flex: 1, padding: "1.25rem", fontSize: "1.1rem" }}
-                onClick={() => {addToCart()}}
+                onClick={() => { addToCart() }}
               >
                 Book Now
               </button>
@@ -176,7 +176,7 @@ const ServiceDetails = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -36,7 +36,7 @@ const ProductDetails = () => {
   );
 
   const imageUrl = product.image
-    ? `http://localhost:5000/uploads/${product.image}`
+    ? `https://sales-service-crmbe.onrender.com/uploads/${product.image}`
     : "https://via.placeholder.com/600x400?text=AC+Unit";
 
   return (
@@ -54,7 +54,7 @@ const ProductDetails = () => {
           borderRadius: "24px",
           border: "none"
         }}>
-        
+
           <div style={{ position: "relative" }}>
             <div className="card-img" style={{
               height: "100%",
@@ -129,7 +129,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

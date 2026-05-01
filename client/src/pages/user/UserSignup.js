@@ -40,7 +40,7 @@ const UserSignup = () => {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://sales-service-crmbe.onrender.com/api/auth/register",
         formData
       );
 

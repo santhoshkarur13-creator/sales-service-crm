@@ -36,7 +36,7 @@ const ServiceCart = () => {
                   className="card-img"
                   src={
                     s.image
-                      ? `http://localhost:5000/uploads/${s.image}`
+                      ? `https://sales-service-crmbe.onrender.com/uploads/${s.image}`
                       : "https://via.placeholder.com/300x180?text=Service"
                   }
                   alt={s.name}

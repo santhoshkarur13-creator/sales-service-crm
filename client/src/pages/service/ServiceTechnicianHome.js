@@ -11,7 +11,7 @@ const ServiceTechnicianHome = () => {
   const fetchCounts = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/services/admin-history");
+      const res = await axios.get("https://sales-service-crmbe.onrender.com/api/services/admin-history");
       const history = res.data;
 
       const pending = history.filter(
@@ -63,7 +63,7 @@ const ServiceTechnicianHome = () => {
         <h2 className="section-title text-gradient">Technical Service Dashboard</h2>
 
         <div className="card-grid fade-in">
-          
+
           <div className="card" style={{ borderTop: "6px solid var(--warning)" }}>
             <div className="card-content" style={{ textAlign: "center" }}>
               <h3 className="card-title">Pending Job Requests</h3>
@@ -81,7 +81,7 @@ const ServiceTechnicianHome = () => {
           </div>
         </div>
       </div>
-      <SerFooter/>
+      <SerFooter />
     </div>
   );
 };

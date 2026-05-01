@@ -16,8 +16,8 @@ const ServiceManagement = () => {
   const [imagePreview, setImagePreview] = useState("");
   const [editingId, setEditingId] = useState(null);
 
-  const API = "http://localhost:5000/api/services";
-  const IMAGE_BASE_URL = "http://localhost:5000/uploads";
+  const API = "https://sales-service-crmbe.onrender.com/api/services";
+  const IMAGE_BASE_URL = "https://sales-service-crmbe.onrender.com/uploads";
 
   const fetchServices = async () => {
     try {
@@ -57,13 +57,13 @@ const ServiceManagement = () => {
 
     try {
       if (editingId) {
-        
+
         await axios.put(`${API}/${editingId}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setEditingId(null);
       } else {
-        
+
         if (!imageFile) {
           alert("Please select a service image");
           return;
@@ -231,7 +231,7 @@ const ServiceManagement = () => {
           </div>
         )}
       </div>
-      <AdminFooter/>
+      <AdminFooter />
     </div>
   );
 };

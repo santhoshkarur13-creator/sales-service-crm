@@ -48,7 +48,7 @@ const ProductCart = () => {
                   padding: "1rem",
                   gap: "2rem"
                 }}>
-                  
+
                   <div style={{
                     flexShrink: 0,
                     width: "120px",
@@ -58,7 +58,7 @@ const ProductCart = () => {
                     boxShadow: "var(--shadow-sm)"
                   }}>
                     <img
-                      src={`http://localhost:5000/uploads/${p.image}`}
+                      src={`https://sales-service-crmbe.onrender.com/uploads/${p.image}`}
                       alt={p.name}
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                       onError={(e) => { e.target.src = "https://via.placeholder.com/120x120?text=Product"; }}
@@ -106,7 +106,7 @@ const ProductCart = () => {
           </div>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

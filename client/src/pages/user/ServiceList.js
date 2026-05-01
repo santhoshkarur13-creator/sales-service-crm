@@ -11,7 +11,7 @@ const ServiceList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/services")
+      .get("https://sales-service-crmbe.onrender.com/api/services")
       .then((res) => setServices(res.data));
   }, []);
 
@@ -31,7 +31,7 @@ const ServiceList = () => {
             >
               <img
                 className="card-img"
-                src={`http://localhost:5000/uploads/${s.image}`}
+                src={`https://sales-service-crmbe.onrender.com/uploads/${s.image}`}
                 alt={s.name}
                 style={{ height: "200px" }}
               />
@@ -45,7 +45,7 @@ const ServiceList = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
